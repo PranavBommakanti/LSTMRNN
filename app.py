@@ -31,5 +31,6 @@ input_text = st.text_input("Enter the sequence of Words","To be or not be")
 if st.button("Predict Next Word"):
     max_sequence_len = model.input_shape[1] + 1
     next_word = predict_next_word(model,tokenizer,input_text,max_sequence_len)
-    st.write(f'Next word:{next_word}')
+    st.write(f'{next_word}')
+
 
